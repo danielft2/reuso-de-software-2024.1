@@ -1,0 +1,7 @@
+[package]
+name = "restaurent-use"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+restaurant = { git = "https://github.com/danielft2/reuso-de-software-2024.1", branch = "master", package="restaurant-lib" }

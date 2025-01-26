@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "course-manager-api"
+version = "0.1.0"
+description = ""
+authors = ["danielft2 <danielalmeida808z@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = { version = "^0.115.7", extras = ["standard"] }
+sqlalchemy = "^2.0.37"
+alembic = "^1.14.1"
+psycopg = {extras = ["binary"], version = "^3.2.3"}
+pydantic-settings = "^2.7.1"
+
+
+[tool.poetry.group.dev.dependencies]
+taskipy = "^1.14.1"
+
+[tool.taskipy.tasks]
+run = "fastapi dev app/api/main.py"
+migrate = "alembic revision --autogenerate -m \"$MESSAGE\""
+upgrade = "alembic upgrade head"
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

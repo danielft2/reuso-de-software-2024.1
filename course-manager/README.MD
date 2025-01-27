@@ -36,23 +36,28 @@ Certifique-se de ter instalado:
    ```
 
 #### Backend
+1. Acesse o projeto:
+  
+   ```bash
+   cd course-manager-api
+   ```
 
-1. Configure as variáveis de ambiente:
+2. Configure as variáveis de ambiente:
    Crie um arquivo `.env` na raiz do projeto e preencha com os valores necessários (veja o exemplo em `.env.example`).
 
-2. Rode o ambiente virtual:
+3. Rode o ambiente virtual:
 
    ```bash
    poetry shell
    ```
 
-3. Instale as depedências:
+4. Instale as depedências:
 
    ```bash
    poetry install
    ```
 
-4. Rode o servidor de desenvolvimento:
+5. Rode o servidor de desenvolvimento:
    ```
    task run
    ```
